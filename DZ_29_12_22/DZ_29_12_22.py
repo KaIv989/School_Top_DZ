@@ -81,19 +81,22 @@ def task_6(word, word_new):
         if count == 0:
             return
         while True:
-            substitutions = int(input(f'Сколько слов вы хотите поменять? Введите число от 1-{count}\n'))
-            if 0 < substitutions <= count:
-                task6.write(read.replace(word, word_new, substitutions))
-                break
-            print('Введите коректное число замен!')
-
+            try:
+                substitutions = int(input(f'Сколько слов вы хотите поменять? Введите число от 1-{count}\n'))
+                if 0 < substitutions <= count:
+                    task6.write(read.replace(word, word_new, substitutions))
+                    break
+                print('Введите коректное число замен!')
+            except ValueError:
+                print('Введите коректное число замен!')
+                
     with open('task6.txt', 'r', encoding='utf-8') as task6:
         print(task6.read())
 
 
-task_1()
-task_2()
-task_3()
-task_4()
-task_5('реже')
+# task_1()
+# task_2()
+# task_3()
+# task_4()
+# task_5('реже')
 task_6('реже', 'чаще')
