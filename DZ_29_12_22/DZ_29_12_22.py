@@ -1,4 +1,20 @@
 
+def task_1():
+
+    """Дано два текстовых файла. Выяснить, совпадают ли
+    их строки. Если нет, то вывести несовпадающую строку
+    из каждого файла."""
+
+    with open("task1.txt", encoding='utf-8') as task1, open('cop_task1.txt', encoding='utf-8') as cop_task1:
+        while True:
+            try:
+                str_f_1 = task1.__next__()
+                str_f_2 = cop_task1.__next__()
+                if str_f_1 != str_f_2:
+                    print(f'В первом текстовом файле: {str_f_1}, а во втором: {str_f_2}')
+            except StopIteration:
+                break
+
 
 def task_2():
 
@@ -74,7 +90,7 @@ def task_6(word, word_new):
     """Дан текстовый файл. Найти и заменить в нем заданное слово. Что искать и на что заменять определяется
     пользователем."""
 
-    with open('task1.txt', 'r', encoding='utf-8' ) as task1, open('task6.txt', 'w', encoding='utf-8') as task6:
+    with open('task1.txt', 'r', encoding='utf-8') as task1, open('task6.txt', 'w', encoding='utf-8') as task6:
         read = task1.read()
         count = read.count(word)
         print(f'{word} встречается {count} раз(а).')
@@ -86,17 +102,17 @@ def task_6(word, word_new):
                 if 0 < substitutions <= count:
                     task6.write(read.replace(word, word_new, substitutions))
                     break
-                print('Введите коректное число замен!')
+                print('Введите корректное число замен!')
             except ValueError:
-                print('Введите коректное число замен!')
+                print('Введите корректное число замен!')
                 
     with open('task6.txt', 'r', encoding='utf-8') as task6:
         print(task6.read())
 
 
-# task_1()
-# task_2()
-# task_3()
-# task_4()
-# task_5('реже')
+task_1()
+task_2()
+task_3()
+task_4()
+task_5('реже')
 task_6('реже', 'чаще')
