@@ -19,6 +19,7 @@ class Car:
             self.__price = value
         else:
             self.__dict__[arg] = value
+
     def __str__(self):
         
         return f'{self.__dict__}'
@@ -26,7 +27,6 @@ class Car:
 
 kia = Car('Cerato', 2010, 'kia', '1.6', 'red', 650000)
 print(kia)
-
 
 # меняем атрибуты через метод change
 kia.change('name', 'civic')
