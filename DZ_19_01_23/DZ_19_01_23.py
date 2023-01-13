@@ -23,11 +23,11 @@ class Car:
 
 kia = Car('Cerato', 2010, 'kia', '1.6', 'red', 650000)
 print(kia.name, kia.brand, kia.color)
-
+kia.__price = 550000
 kia.change('name', 'civic')
 kia.change('brand', 'honda')
 kia.change('color', 'black')
-kia.change('__price', 1)
+# kia.change('__price', 1)
 kia.__price = 550000
 print(kia.name, kia.brand, kia.color, kia.__price)
 print(kia)
