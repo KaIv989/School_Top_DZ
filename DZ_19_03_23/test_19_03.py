@@ -32,3 +32,7 @@ class Test_number(unittest.TestCase):
                 self.assertEqual(i.min_num(), min(i.number))
 
 
+if __name__ == '__main__':
+    unittest.main
+
+
