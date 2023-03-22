@@ -6,7 +6,7 @@ class Test_number(unittest.TestCase):
     def setUp(self): #спец функция, здесь при запуске мы можем провести какую то подготовку,
         #например создать экземпляр какого то класса
         self.num = Number()
-        self.arr = [48, -1, 0]
+        self.arr = [48, -1, 0, 33]
 
     def test_num(self):
         for i in self.arr:
@@ -20,3 +20,4 @@ class Test_number(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main
+

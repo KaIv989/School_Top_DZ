@@ -1,7 +1,7 @@
 
 class Number:
     def record(self, value: int = None):
-        if value or value == 0:
+        if value or value == 0: # Записываем в файл если передаются значения
             with open('1test.txt', 'w') as f:
                 f.write(str(value))
             return 'Запись завершена '
@@ -20,4 +20,5 @@ class Number:
 
 a = Number()
 a.record(8)
+
 
