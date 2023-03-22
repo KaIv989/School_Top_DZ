@@ -8,7 +8,7 @@ class Test_number(unittest.TestCase):
         self.num = Number()
         self.arr = [48, -1, 0]
 
-    def test_sum(self):
+    def test_num(self):
         for i in self.arr:
             self.num.record(i)
             self.assertEqual(self.num.calculus_system_8(), oct(i))

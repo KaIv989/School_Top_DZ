@@ -19,5 +19,5 @@ class Number:
          return bin(self.record())
 
 a = Number()
-print(a.record(8))
-print(a.calculus_system_8())
+a.record(8)
+
